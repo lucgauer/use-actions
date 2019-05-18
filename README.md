@@ -25,22 +25,6 @@ The dispatch action. Take a look at [useReducer](https://reactjs.org/docs/hooks-
 
 A classical example o usage:
 
-* Container
-```jsx
-import React, { useReducer } from 'useActions';
-import useActions from 'use-actions';
-import * as actions from '../actions/foobar';
-import reducer, { initialState } from '../reducers/foobar';
-
-const FoobarContainer = () => {
-    const [] = useReducer(reducer, initialState);
-    const { dispatchBindedAction } = useActions(actions, dispatch);
-    
-    // Runs passing curried dispatch to the action
-    return <button onClick={dispatchBindedAction}>Click me</button>;
-};
-```
-
 * Actions
 ```js
 // actions/foo-bar.jsx
@@ -50,6 +34,22 @@ export default argument => dispatch => {
     // [...]
     dispatch({ type: ACTION_TYPE, payload: argument });
 }
+```
+
+* Container
+```jsx
+import React, { useReducer } from 'useActions';
+import useActions from 'use-actions';
+import * as actions from '../actions/foobar';
+import reducer, { initialState } from '../reducers/foobar';
+
+const FoobarContainer = () => {
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const { dispatchBindedAction } = useActions(actions, dispatch);
+    
+    // Runs passing curried dispatch to the action
+    return <button onClick={dispatchBindedAction}>Click me</button>;
+};
 ```
 
 ### License
