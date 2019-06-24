@@ -1,8 +1,8 @@
 # useActions &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lucgauer/use-actions/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/use-actions.svg?style=flat)](https://www.npmjs.com/package/react)
 
-Inspired by [redux-thunk](https://github.com/reduxjs/redux-thunk), action binding for your your application.
+A [~200 Bytes](https://bundlephobia.com/result?p=use-actions@latest) react hook, inspired by [redux-thunk](https://github.com/reduxjs/redux-thunk), for your your application action binding.
 
-Fits well with [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer) for state management. 😎
+Fits well with [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer) for state management. 🔌
 
 ## Installation
 ```
